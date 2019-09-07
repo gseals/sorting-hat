@@ -1,3 +1,7 @@
+//to do:
+// expel button;
+// clear field;
+
 //array of items to be randomly printed
 
 const houses =["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
@@ -66,6 +70,3 @@ document.body.addEventListener('click', (e) => {
       card.parentNode.removeChild(card);
     }
   })
-
-// expel button;
-// clear field;
