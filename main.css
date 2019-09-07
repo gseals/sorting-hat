@@ -26,10 +26,17 @@ body {
     justify-content: space-evenly;
 }
 
-.class {
+/* .class {
     width: 18rem;
-}
-/* 
-#centerThis {
-    text-align: center;
 } */
+
+#sorting {
+    border-top: 1px;
+    border-bottom: 1px;
+}
+
+.card-body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 15px 15px;
+}
