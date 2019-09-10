@@ -1,7 +1,3 @@
-//to do:
-// expel button;
-// clear field;
-
 //array of items to be randomly printed
 
 const houses =["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
@@ -22,7 +18,7 @@ const sortingPrinter = () => {
   </div>
   <div class="form-group mx-sm-3 mb-2">
     <label for="studentName" class="sr-only">Student name</label>
-    <input type="text" class="form-control" id="studentName" placeholder="Name here, please">
+    <input type="text" class="form-control" id="studentName" required placeholder="Name here, please">
   </div>
   <button type="button" class="btn btn-primary mb-2" id="sort">Sort!</button>
   </form>`
@@ -35,25 +31,34 @@ const printToDom = (toPrint, divId) => {
   document.getElementById(divId).innerHTML += toPrint
 }
 
-let i = 0;
-
 const cardPrinting = (arr) => {
     let houseName = arr[Math.floor(Math.random() * arr.length)];
     let nameValue = document.getElementById('studentName').value;
     let domString = '';
     domString += `
     <div class="card">
-    <div class="card-body" class="card-${i}">
+    <div class="card-body">
       <h5 class="card-title">${nameValue}</h5>
       <h6 class="card-subtitle mb-2 text-muted">You'll fit well in ${houseName}!</h6>
       <p class="card-text">Congratulations! Don't die!</p>
-      <button value="${i}" class="card-link" id="expel">Expel</button>
+      <button  class="card-link expel">Expel</button>
     </div>
   </div>`
-  i += 1;
   printToDom(domString, 'random-card');
+  studentName.value = "";
+  assignEventListeners();
 }
 
+const assignEventListeners = () => {
+  let listeners = document.getElementsByClassName('expel');
+  for (let i = 0; i < listeners.length; i++) {
+    listeners[i].addEventListener ('click', (e) => {
+      e.target.parentElement.parentElement.remove();
+    })
+  }
+}
+
+//a collection of items is an array
 //below: a global button click listener
 
 document.body.addEventListener('click', (e) => {
@@ -62,11 +67,5 @@ document.body.addEventListener('click', (e) => {
     }
     if (e.target.id === 'sort') {
       cardPrinting(houses);
-    }
-    if (e.target.id === 'expel') {
-      const cardValue = e.target.value;
-      const cardId = `card-${cardValue}`;
-      const card = document.getElementById(cardId);
-      card.parentNode.removeChild(card);
     }
   })
