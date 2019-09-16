@@ -1,5 +1,6 @@
 body {
-    background-color: seagreen;
+    background: url(https://media3.giphy.com/media/136WHJXKELjk1q/giphy.gif) no-repeat center center fixed;
+    background-size: cover;
 }
 
 .jumbotron {
@@ -40,3 +41,21 @@ body {
     margin-bottom: 10px;
     box-shadow: 15px 15px;
 }
+
+
+/*the part below belongs to the color assignment in JS and I do not have that working yet*/
+/* .maroon {
+    background-color: maroon;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+} */

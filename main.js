@@ -67,5 +67,23 @@ document.body.addEventListener('click', (e) => {
     }
     if (e.target.id === 'sort') {
       cardPrinting(houses);
+      // stylingName(houses);
     }
   })
+
+// This will take some work. The accompanying files in CSS are also commented out. Maroon is assigned to each card printed. Have to undo whatever kink is in the machine.
+
+  // const stylingName = (dataIncoming) => {
+  //   const houseColor = document.getElementsByClassName("card-body")
+  //   for(let i =0; i<dataIncoming.length; i++){
+  //     if (dataIncoming[0]) {
+  //     houseColor[i].classList.add("maroon");
+  //   } else if (dataIncoming[1]) {
+  //     houseColor[i].classList.add("green");
+  //   } else if (dataIncoming[2]) {
+  //     houseColor[i].classList.add("yellow");
+  //   } else if (dataIncoming[3]) {
+  //     houseColor[i].classList.add("blue");
+  //   }
+  //  }
+  // };
