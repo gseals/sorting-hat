@@ -14,13 +14,13 @@ An application allowing users to be sorted into a random Hogwarts House. Expelli
 ## Screenshot(s)
 
 Page Load
-![Main View](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/Mainview.png)
+![Main View](https://raw.githubusercontent.com/gseals/sorting-hat/master/screenshots/mainview.png)
 
 First button click triggers this screen
-![First Button](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/redtemp.png)
+![First Button](https://raw.githubusercontent.com/gseals/sorting-hat/master/screenshots/firstbutton.png)
 
 New button sorts name from field into random house
-![Random House](https://raw.githubusercontent.com/gseals/temp-converter/master/screenshots/redtemp2.png)
+![Random House](https://raw.githubusercontent.com/gseals/sorting-hat/master/screenshots/sorted.png)
 
 
 ## Instructions for how to run the project
